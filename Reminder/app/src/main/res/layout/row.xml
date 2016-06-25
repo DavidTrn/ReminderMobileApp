@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="9.0sp"
+        android:textColor="#ff777777"
+        android:id="@+id/month_tv"
+        android:paddingTop="6.0sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+    <TextView android:textSize="9.0sp"
+        android:textColor="#ff777777"
+        android:id="@+id/year_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_tv"
+        android:layout_alignParentRight="true" />
+    <TextView
+        android:textSize="27.0sp"
+        android:textColor="#ff777777"
+        android:id="@+id/date_tv"
+        android:paddingRight="1.0sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/year_tv"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="#ff587498"
+        android:id="@+id/msg_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/date_tv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="#ff777777"
+        android:id="@+id/time_tv"
+        android:paddingTop="5.0sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/msg_tv"
+        android:layout_alignParentLeft="true" />
+</RelativeLayout>

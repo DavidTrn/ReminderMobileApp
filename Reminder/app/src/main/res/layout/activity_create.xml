@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_repeat">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:background="#1ABC9C"
+        android:gravity="center_vertical"
+        android:id="@+id/createBarLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBack"
+            android:src="@drawable/back"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btnBack"
+            android:layout_toEndOf="@+id/btnBack" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/confirm"
+            android:src="@drawable/iv_create"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/createBarLayout">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:hint="@string/title"
+            android:inputType="textLongMessage"
+            android:layout_margin="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:id="@+id/body"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:minLines="3"
+            android:maxLines="3"
+            android:scrollbars="vertical"
+            android:hint="@string/body"
+            android:gravity="top"
+            android:layout_margin="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/body"
+            android:layout_margin="10dp"
+            android:id="@+id/DateLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:id="@+id/tvCreateDate"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reminder_date"
+                android:paddingLeft="20dp"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/DateLayout"
+            android:layout_margin="10dp"
+            android:id="@+id/TimeLayout">
+            // Edit2 " change to image flat button "
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:id="@+id/tvCreateTime"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reminder_time"
+                android:paddingLeft="20dp"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_below="@+id/TimeLayout"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:id="@+id/RepeatLayout">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/repeat"-->
+                <!--android:id="@+id/tvRepeat"-->
+                <!--android:layout_centerVertical="true"/>-->
+
+            <!--<ToggleButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="New ToggleButton"-->
+                <!--android:id="@+id/toggleButton"-->
+                <!--android:textOn=""-->
+                <!--android:textOff=""-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:button="@drawable/onofftog"-->
+                <!--android:background="@null"/>-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/RepeatLayout"-->
+            <!--android:id="@+id/IntervalLayout"-->
+            <!--android:orientation="vertical"-->
+            <!--android:visibility="gone">-->
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:id="@+id/tvInterval"-->
+                <!--android:text="@string/interval"/>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:id="@+id/intervalLayout"-->
+                <!--android:gravity="center">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginRight="8dp">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="min(s)" />-->
+                    <!--<EditText-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@drawable/tvinterval"-->
+                        <!--android:id="@+id/edtMinutesInterval"-->
+                        <!--android:inputType="number"-->
+                        <!--android:text="00"/>/>-->
+
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="8dp"-->
+                    <!--android:orientation="vertical">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="hour(s)"/>-->
+                    <!--<EditText-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@drawable/tvinterval"-->
+                        <!--android:id="@+id/edtHourInterval"-->
+                        <!--android:text="00"-->
+                        <!--android:inputType="number"/>/>-->
+
+                <!--</LinearLayout>-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginRight="8dp">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="day(s)"/>-->
+                    <!--<EditText-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@drawable/tvinterval"-->
+                        <!--android:id="@+id/edtDayInterval"-->
+                        <!--android:text="00"-->
+                        <!--android:inputType="number"/>/>-->
+
+                <!--</LinearLayout>-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginRight="10dp">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="70dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="month(s)"/>-->
+                    <!--<EditText-->
+                        <!--android:layout_width="60dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@drawable/tvinterval"-->
+                        <!--android:id="@+id/edtMonthInterval"-->
+                        <!--android:text="00"-->
+                        <!--android:inputType="number"/>-->
+
+                <!--</LinearLayout>-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginRight="8dp">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="year(s)"/>-->
+                    <!--<EditText-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@drawable/tvinterval"-->
+                        <!--android:id="@+id/edtYearInterval"-->
+                        <!--android:text="00"-->
+                        <!--android:inputType="number"/>-->
+
+                <!--</LinearLayout>-->
+
+
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</ScrollView>

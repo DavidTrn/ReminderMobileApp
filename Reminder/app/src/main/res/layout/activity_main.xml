@@ -1,0 +1,170 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_repeat"
+        android:id="@+id/mainLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_centerHorizontal="true"
+            android:background="#1ABC9C"
+            android:id="@+id/mainBarLayout">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pre"
+                android:id="@+id/imgPre"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/next"
+                android:id="@+id/imgNext"
+                android:layout_marginEnd="30dp"
+                android:layout_alignTop="@+id/imgPre"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgCalendar"
+                android:src="@drawable/calendar"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:id="@+id/tvMainDate"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:background="@drawable/date"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/imgCalendar"
+                android:layout_alignEnd="@+id/imgCalendar"
+                android:layout_marginRight="22dp"
+                android:layout_marginEnd="22dp" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/mainBarLayout" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="@string/empty_list"
+            android:textColor="#888888"
+            android:textSize="15sp"
+            android:id="@+id/tvEmpty"
+            android:layout_alignTop="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="243dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:visibility="invisible"
+            android:id="@+id/textView"
+            android:layout_marginRight="28dp"
+            android:layout_marginEnd="28dp"
+            android:layout_below="@+id/tvEmpty"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:visibility="invisible"
+            android:id="@+id/textView2"
+            android:layout_marginTop="79dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:visibility="invisible"
+            android:id="@+id/textView3"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/floating_btn"
+            android:src="@drawable/ft_btn"
+            android:layout_below="@+id/textView3"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3" />
+
+
+    </RelativeLayout>
+
+    <!--Drawer-->
+    <LinearLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:paddingTop="0dp">
+
+        <ImageView
+            android:id="@+id/iv_imgDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/drawer1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <ListView
+            android:id="@+id/lv_drawer"
+            android:layout_width="445dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:background="#fff" />
+        <TextView
+            android:id="@+id/txtitem"
+            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_weight="2"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="2dp"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
